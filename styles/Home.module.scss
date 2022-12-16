@@ -1,0 +1,24 @@
+.homepage {
+  background-color: antiquewhite;
+
+  .cardContainer {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 3rem;
+
+    &__card0 {
+      width: 450px;
+      height: 550px;
+      margin-left: auto;
+    }
+    &__card1 {
+      width: 500px;
+      height: 500px;
+      margin-right: auto;
+      margin-left: 4rem;
+      margin-top: -16rem;
+    }
+  }
+}
