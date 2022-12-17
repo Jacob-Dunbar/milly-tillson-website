@@ -4,7 +4,6 @@ import { createClient } from "contentful";
 import GalleryCard from "../components/Card";
 import Footer from "../components/Footer";
 import { StyledHome } from "../components/Styled/Home.style";
-import { GlobalStyles } from "../components/Styled/Global";
 
 export default function Home({ galleries }: any) {
   return (
@@ -15,20 +14,21 @@ export default function Home({ galleries }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <GlobalStyles />
 
       <StyledHome>
-        {galleries.map((gallery: any) => {
+        {/* {galleries.map((gallery: any, i: number) => {
           return (
             <div>
               <GalleryCard
                 gallery={gallery}
                 image={gallery.fields.images[0]}
                 key={gallery.sys.id}
+              
+              
               />
             </div>
           );
-        })}
+        })} */}
       </StyledHome>
 
       <Footer />
