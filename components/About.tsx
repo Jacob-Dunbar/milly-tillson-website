@@ -1,13 +1,13 @@
-import React from "react";
+import { StyledAbout } from "./Styled/About.style";
 
 const About = () => {
   return (
-    <div>
+    <StyledAbout>
       <p>
         munich based still life and fashion photographer specialising in art
         direction, e-commerce and styling.
       </p>
-    </div>
+    </StyledAbout>
   );
 };
 

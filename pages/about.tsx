@@ -1,15 +1,15 @@
 import React from "react";
-import About from "../components/About";
+import { StyledAbout } from "../components/Styled/About.style";
 import type { GetStaticProps } from "next";
 import { createClient } from "contentful";
 
 const about = ({ about }: any) => {
   const { block1, block2 } = about[0].fields;
   return (
-    <div>
-      <h1>About</h1>
+    <StyledAbout>
       <p>{block1}</p>
-    </div>
+      <p>{block2}</p>
+    </StyledAbout>
   );
 };
 
