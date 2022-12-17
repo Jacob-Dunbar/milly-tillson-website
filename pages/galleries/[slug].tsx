@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import type { GetStaticPaths, GetStaticProps } from "next";
-import css from "../../styles/Gallery.module.scss";
-import Image from "next/image";
+import Carousel from "../../components/Carousel";
+import { StyledGallery } from "../../components/Styled/Gallery.style";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -42,33 +42,12 @@ const GalleryPage = ({ gallery }: any) => {
   const { name, images } = gallery.fields;
   console.log(images);
   return (
-    <div className={css.gallery}>
-      {/* <div className={css.gallery__imageContainer}>
-        <Image src={`https:${images[0].fields.file.url}`} fill alt={name} />;
-      </div> */}
-      <h1 className={css.gallery__name}>{name}</h1>
-      <div className={css.gallery__carousel}>
-        {images.map((image: any) => (
-          <div className={css.gallery__imageContainer}>
-            <Image
-              className={css.gallery__image}
-              src={`https:${image.fields.file.url}`}
-              fill
-              alt={name}
-            />
-            ;
-          </div>
-        ))}
-        <div className={css.gallery__imageContainer}>
-          <Image
-            className={css.gallery__image}
-            src={`https:${images[1].fields.file.url}`}
-            fill
-            alt={name}
-          />
-        </div>
-      </div>
-    </div>
+    <StyledGallery>
+      <StyledGallery>
+        <h1>{name}</h1>
+        <Carousel images={images} name={name} />
+      </StyledGallery>
+    </StyledGallery>
   );
 };
 

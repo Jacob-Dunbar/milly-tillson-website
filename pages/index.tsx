@@ -1,19 +1,12 @@
 import Head from "next/head";
 import type { GetStaticProps } from "next";
-import Image from "next/image";
-import css from "../styles/Home.module.scss";
 import { createClient } from "contentful";
-import GalleryCard from "../components/GalleryCard";
+import GalleryCard from "../components/Card";
+import Footer from "../components/Footer";
+import { StyledHome } from "../components/Styled/Home.style";
+import { GlobalStyles } from "../components/Styled/Global";
 
 export default function Home({ galleries }: any) {
-  // const galleryCards = ({ galleries.map((gallery: any) => (
-  //   <GalleryCard
-  //     gallery={gallery}
-  //     image={gallery.fields.images[0]}
-  //     key={gallery.sys.id}
-  //   />
-  // })
-
   return (
     <>
       <Head>
@@ -22,28 +15,23 @@ export default function Home({ galleries }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className={css.homepage}>
-        <div className={css.cardContainer}>
-          {galleries.length > 0 && (
-            <div className={css.cardContainer__card0}>
+      <GlobalStyles />
+
+      <StyledHome>
+        {galleries.map((gallery: any) => {
+          return (
+            <div>
               <GalleryCard
-                gallery={galleries[0]}
-                image={galleries[0].fields.images[0]}
-                key={galleries[0].sys.id}
+                gallery={gallery}
+                image={gallery.fields.images[0]}
+                key={gallery.sys.id}
               />
             </div>
-          )}
-          {galleries.length > 1 && (
-            <div className={css.cardContainer__card1}>
-              <GalleryCard
-                gallery={galleries[1]}
-                image={galleries[1].fields.images[0]}
-                key={galleries[1].sys.id}
-              />
-            </div>
-          )}
-        </div>
-      </section>
+          );
+        })}
+      </StyledHome>
+
+      <Footer />
     </>
   );
 }

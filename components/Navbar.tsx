@@ -1,19 +1,32 @@
-import React from "react";
+import Link from "next/link";
 import css from "../styles/Navbar.module.scss";
 import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { StyledNavbar } from "./Styled/Navbar.style";
 
 const Navbar = () => {
   return (
-    <div className={css.navbar}>
-      <h1 className={css.navbar__heading}>Milly Tillson</h1>
-      <ul className={css.navbar__menu}>
-        <li className={css.navbar__link}>Home</li>
-        <li className={css.navbar__link}>About</li>
-        <li className={css.navbar__link}>Contact</li>
-        <AiFillInstagram />
-        <AiFillLinkedin />
+    <StyledNavbar>
+      <Link href="/">
+        <h1>Milly Tillson</h1>
+      </Link>
+      <ul>
+        <Link href="/">
+          <li>Home</li>
+        </Link>
+        <Link href="/">
+          <li>About</li>
+        </Link>
+        <Link href="/">
+          <li>Contact</li>
+        </Link>
+        <Link className="icon" href="/">
+          <AiFillInstagram />
+        </Link>
+        <Link className="icon" href="/">
+          <AiFillLinkedin />
+        </Link>
       </ul>
-    </div>
+    </StyledNavbar>
   );
 };
 
