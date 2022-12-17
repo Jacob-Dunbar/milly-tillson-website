@@ -1,5 +1,4 @@
 import Link from "next/link";
-import css from "../styles/Navbar.module.scss";
 import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { StyledNavbar } from "./Styled/Navbar.style";
 
@@ -13,7 +12,7 @@ const Navbar = () => {
         <Link href="/">
           <li>Home</li>
         </Link>
-        <Link href="/">
+        <Link href="/about">
           <li>About</li>
         </Link>
         <Link href="/">
