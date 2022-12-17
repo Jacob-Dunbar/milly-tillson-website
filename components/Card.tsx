@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { StyledCard } from "./Styled/Card.style";
 
 const GalleryCard = ({ gallery, image }: any) => {
@@ -16,7 +17,10 @@ const GalleryCard = ({ gallery, image }: any) => {
           alt={name + "thumbnail"}
         />
 
-        <h2>{name}</h2>
+        <h2>
+          {name}
+          <AiOutlineArrowRight />
+        </h2>
       </Link>
     </StyledCard>
   );
