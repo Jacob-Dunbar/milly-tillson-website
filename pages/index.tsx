@@ -16,19 +16,13 @@ export default function Home({ galleries }: any) {
       </Head>
 
       <StyledHome>
-        {/* {galleries.map((gallery: any, i: number) => {
+        {galleries.map((gallery: any, i: number) => {
           return (
-            <div>
-              <GalleryCard
-                gallery={gallery}
-                image={gallery.fields.images[0]}
-                key={gallery.sys.id}
-              
-              
-              />
+            <div key={gallery.sys.id}>
+              <GalleryCard gallery={gallery} image={gallery.fields.images[0]} />
             </div>
           );
-        })} */}
+        })}
       </StyledHome>
 
       <Footer />
