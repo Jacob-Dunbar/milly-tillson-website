@@ -4,7 +4,6 @@ import Image from "next/image";
 import css from "../styles/Home.module.scss";
 import { createClient } from "contentful";
 import GalleryCard from "../components/GalleryCard";
-import Navbar from "../components/Navbar";
 
 export default function Home({ galleries }: any) {
   // const galleryCards = ({ galleries.map((gallery: any) => (
@@ -24,7 +23,6 @@ export default function Home({ galleries }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={css.homepage}>
-        <Navbar />
         <div className={css.cardContainer}>
           {galleries.length > 0 && (
             <div className={css.cardContainer__card0}>
