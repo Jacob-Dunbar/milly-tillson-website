@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { StyledHome } from "../components/Styled/Home.style";
 
 export default function Home({ galleries }: any) {
+  console.log(galleries);
   return (
     <>
       <Head>
@@ -19,7 +20,10 @@ export default function Home({ galleries }: any) {
         {galleries.map((gallery: any, i: number) => {
           return (
             <div key={gallery.sys.id}>
-              <GalleryCard gallery={gallery} image={gallery.fields.images[0]} />
+              <GalleryCard
+                gallery={gallery}
+                image={gallery.imagesCollection.items[0].url}
+              />
             </div>
           );
         })}
@@ -30,17 +34,67 @@ export default function Home({ galleries }: any) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
+export const getStaticProps = async () => {
+  const result = await fetch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
+        query {
+          galleryCollection {
+            
+            items {
+              name
+              order
+              slug
+              imagesCollection {
+                items{
+                  title
+                  url
+                }
+              }
+              sys {
+                id
+              }
+            }
+          }
+        }
+        `,
+      }),
+    }
+  );
 
-  const res = await client.getEntries({ content_type: "gallery" });
+  if (!result.ok) {
+    console.log(result);
+    return {};
+  }
+
+  const { data } = await result.json();
+  const galleries = data.galleryCollection.items;
 
   return {
     props: {
-      galleries: res.items,
+      galleries,
     },
   };
 };
+
+// export const getStaticProps: GetStaticProps = async () => {
+//   const client = createClient({
+//     space: process.env.CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+//   });
+
+//   const res = await client.getEntries({ content_type: "gallery" });
+
+//   return {
+//     props: {
+//       galleries: res.items,
+//     },
+//   };
+// };
