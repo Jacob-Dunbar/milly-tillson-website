@@ -1,22 +1,25 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
-  width: 100%;
-  height: 100%;
   position: relative;
+  display: inline-block;
+  width: max-content;
+  height: max-content;
   transition: all 600ms ease;
+  margin: 1rem;
 
   .image {
-    object-fit: cover;
+    width: auto;
+    max-height: 500px;
   }
 
   h2 {
     position: absolute;
-    bottom: -1.25rem;
-    right: 1rem;
-    width: 100%;
+    bottom: -1rem;
+    right: 0;
+
     color: black;
-    font-size: 2.5rem;
+    font-size: 2rem;
 
     text-align: end;
 

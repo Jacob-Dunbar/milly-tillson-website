@@ -16,12 +16,8 @@ export default function Home({ galleries }: any) {
       </Head>
 
       <StyledHome>
-        {galleries.map((gallery: any, i: number) => {
-          return (
-            <div key={gallery.sys.id}>
-              <GalleryCard gallery={gallery} />
-            </div>
-          );
+        {galleries.map((gallery: any) => {
+          return <GalleryCard key={gallery.sys.id} gallery={gallery} />;
         })}
       </StyledHome>
 
@@ -52,6 +48,8 @@ export const getStaticProps = async () => {
                 items{
                   title
                   url
+                  width
+                  height
                 }
               }
               sys {
@@ -71,7 +69,9 @@ export const getStaticProps = async () => {
   }
 
   const { data } = await result.json();
-  const galleries = data.galleryCollection.items;
+  const galleries = data.galleryCollection.items.sort(
+    (a: any, b: any) => a.order - b.order
+  );
 
   return {
     props: {

@@ -9,16 +9,30 @@ export const StyledHome = styled.section`
   min-height: 100vh;
 
   div:nth-child(1) {
-    width: 450px;
-    height: 550px;
     margin-left: auto;
   }
+
   div:nth-child(2) {
-    width: 500px;
-    height: 500px;
-    margin-right: auto;
-    margin-left: 4rem;
-    margin-top: -16rem;
+    margin-top: -10rem;
+  }
+
+  div:nth-child(3) {
+    margin-top: 10rem;
+    margin-left: auto;
+  }
+
+  div:nth-child(4) {
+    margin-top: 10rem;
+  }
+
+  div:nth-child(5) {
+    margin-top: 5rem;
+    margin-left: 20rem;
+  }
+
+  div:nth-child(6) {
+    margin-top: 5rem;
+    margin-left: auto;
   }
 
   @media (max-width: 420px) {

@@ -17,22 +17,25 @@ interface Props {
 interface Image {
   name: string;
   url: string;
+  width: number;
+  height: number;
 }
 
 type Images = Image[];
 
 const GalleryCard: React.FC<Props> = ({ gallery }) => {
-  const { name, order, slug } = gallery;
-  const Thumbnail = gallery.imagesCollection.items[0].url;
+  const { name, slug, imagesCollection } = gallery;
 
   return (
     <StyledCard>
+      {" "}
       <Link href={"/galleries/" + slug}>
         <Image
           className="image"
-          src={Thumbnail}
+          src={gallery.imagesCollection.items[0].url}
           quality={50}
-          fill
+          width={imagesCollection.items[0].width}
+          height={imagesCollection.items[0].height}
           alt={name + "thumbnail"}
         />
 
