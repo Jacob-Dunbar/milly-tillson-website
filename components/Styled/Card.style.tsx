@@ -19,29 +19,19 @@ export const StyledCard = styled.div`
     right: 0;
 
     color: black;
-    font-size: 2rem;
+    font-size: 1.75rem;
 
     text-align: end;
-
+    transition: all 600ms ease;
     display: flex;
     justify-content: end;
     align-items: center;
-
-    > * {
-      width: 2rem;
-      margin-left: 1rem;
-      padding-top: 0.2rem;
-      transition: all 600ms ease;
-      opacity: 0;
-      margin-right: -2rem;
-    }
   }
 
   &:hover {
     transform: scale(1.05);
 
-    h2 > * {
-      opacity: 1;
+    h2 {
       margin-right: 3rem;
     }
   }
