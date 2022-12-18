@@ -19,14 +19,14 @@ export const StyledCarousel = styled.div`
     display: none;
   }
 
-  & > div {
+  & > * {
     height: 65vh;
-    aspect-ratio: 10 / 12;
+    width: auto;
 
     position: relative;
 
     &:first-child {
-      margin-left: 500px;
+      margin-left: 400px;
     }
 
     .image {
