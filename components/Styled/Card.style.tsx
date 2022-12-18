@@ -37,23 +37,14 @@ export const StyledCard = styled.div`
   }
 
   @media (max-width: 420px) {
-    transition: none;
+    .image {
+      max-width: 80vw;
+      height: auto;
+    }
 
     h2 {
-      right: 0;
-      font-size: 2rem;
-
-      > * {
-        transition: none;
-      }
-    }
-    &:hover {
-      transform: none;
-
-      h2 > * {
-        opacity: 0;
-        margin-right: -2rem;
-      }
+      font-size: 1.25rem;
+      bottom: -0.5rem;
     }
   }
 `;
