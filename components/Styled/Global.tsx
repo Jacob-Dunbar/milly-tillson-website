@@ -11,6 +11,8 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
     font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
 
 a{
@@ -20,7 +22,7 @@ a{
 
 
 body {
-    background-color: #fff;
+    background-color: #f9f3f3;
     color: hsl(192, 100%, 9%);
     font-family: "Poppins", sans-serif;
     font-size: 1.15rem;
