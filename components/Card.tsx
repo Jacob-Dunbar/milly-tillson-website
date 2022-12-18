@@ -4,14 +4,14 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { StyledCard } from "./Styled/Card.style";
 
 const GalleryCard = ({ gallery, image }: any) => {
-  const { name, order, slug } = gallery.fields;
+  const { name, order, slug } = gallery;
 
   return (
     <StyledCard>
       <Link href={"/galleries/" + slug}>
         <Image
           className="image"
-          src={`https:${image.fields.file.url}`}
+          src={image}
           quality={50}
           fill
           alt={name + "thumbnail"}
