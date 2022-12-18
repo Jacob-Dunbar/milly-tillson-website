@@ -33,4 +33,22 @@ export const StyledCarousel = styled.div`
       object-fit: cover;
     }
   }
+  @media (max-width: 420px) {
+    background-color: aqua;
+    flex-direction: column;
+    height: 100%;
+
+    overflow-y: visible;
+
+    & > div {
+      height: unset;
+      width: 100%;
+
+      position: relative;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
 `;
