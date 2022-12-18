@@ -3,6 +3,18 @@ import type { GetStaticPaths, GetStaticProps } from "next";
 import Carousel from "../../components/Carousel";
 import { StyledGallery } from "../../components/Styled/Gallery.style";
 
+const GalleryPage = ({ gallery }: any) => {
+  const { name, images } = gallery.fields;
+
+  return (
+    <StyledGallery>
+      <h1>{name}</h1>
+
+      <Carousel images={images} name={name} />
+    </StyledGallery>
+  );
+};
+
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
@@ -36,19 +48,6 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
       gallery: items[0],
     },
   };
-};
-
-const GalleryPage = ({ gallery }: any) => {
-  const { name, images } = gallery.fields;
-  console.log(images);
-  return (
-    <StyledGallery>
-      <StyledGallery>
-        <h1>{name}</h1>
-        <Carousel images={images} name={name} />
-      </StyledGallery>
-    </StyledGallery>
-  );
 };
 
 export default GalleryPage;
