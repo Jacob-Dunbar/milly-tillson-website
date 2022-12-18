@@ -35,4 +35,14 @@ export const StyledNavbar = styled.nav`
       align-items: center;
     }
   }
+
+  @media (max-width: 420px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    ul {
+      display: none;
+    }
+  }
 `;

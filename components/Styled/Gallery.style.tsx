@@ -13,4 +13,19 @@ export const StyledGallery = styled.section`
     top: 66vh;
     right: 80px;
   }
+
+  @media (max-width: 420px) {
+    min-height: 100vh;
+    height: 100%;
+    padding: 0 1rem;
+    overflow-y: visible;
+
+    h1 {
+      font-size: 1.75rem;
+      position: absolute;
+      z-index: 50;
+      top: 3vh;
+      right: 5%;
+    }
+  }
 `;

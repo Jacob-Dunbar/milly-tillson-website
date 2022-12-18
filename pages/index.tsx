@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import { StyledHome } from "../components/Styled/Home.style";
 
 export default function Home({ galleries }: any) {
-  console.log(galleries);
   return (
     <>
       <Head>
@@ -20,10 +19,7 @@ export default function Home({ galleries }: any) {
         {galleries.map((gallery: any, i: number) => {
           return (
             <div key={gallery.sys.id}>
-              <GalleryCard
-                gallery={gallery}
-                image={gallery.imagesCollection.items[0].url}
-              />
+              <GalleryCard gallery={gallery} />
             </div>
           );
         })}
