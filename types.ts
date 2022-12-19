@@ -1,8 +1,8 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      space: string | undefined;
-      accessToken: string;
+      space: any;
+      accessToken: any;
     }
   }
 }
