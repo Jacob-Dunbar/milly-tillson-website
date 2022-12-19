@@ -6,5 +6,11 @@ export const StyledFooter = styled.footer`
   background-color: rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0.5rem 0;
+  height: 5vh;
+
+  @media (max-width: 420px) {
+    font-size: 0.5rem;
+  }
 `;

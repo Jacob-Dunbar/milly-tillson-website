@@ -2,7 +2,7 @@ import Head from "next/head";
 import type { GetStaticProps } from "next";
 import { createClient } from "contentful";
 import GalleryCard from "../components/Card";
-import Footer from "../components/Footer";
+
 import { StyledHome } from "../components/Styled/Home.style";
 
 export default function Home({ galleries }: any) {
@@ -20,8 +20,6 @@ export default function Home({ galleries }: any) {
           return <GalleryCard key={gallery.sys.id} gallery={gallery} />;
         })}
       </StyledHome>
-
-      <Footer />
     </>
   );
 }
