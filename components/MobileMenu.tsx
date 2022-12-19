@@ -30,10 +30,16 @@ const MobileMenu: React.FC<Props> = (props) => {
         <Link href="/contact">
           <li onClick={() => props.setShowMobMenu(false)}>Contact</li>
         </Link>
-        <Link className="icon" href="/">
+        <Link
+          className="icon"
+          href="https://www.instagram.com/millytillson/?hl=en"
+        >
           <AiFillInstagram />
         </Link>
-        <Link className="icon" href="/">
+        <Link
+          className="icon"
+          href="https://www.linkedin.com/in/milly-tillson/?originalSubdomain=de"
+        >
           <AiFillLinkedin />
         </Link>
       </ul>
