@@ -43,8 +43,18 @@ export const StyledCard = styled.div`
     }
 
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
+
       bottom: -0.5rem;
+      right: 0.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+
+      h2 {
+        margin-right: 2rem;
+      }
     }
   }
 `;
