@@ -18,7 +18,7 @@ const GalleryPage = ({ gallery }: any) => {
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-});
+} as const);
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await client.getEntries({
