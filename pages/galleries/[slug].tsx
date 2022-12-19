@@ -20,7 +20,7 @@ const client: any = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const res = await client.getEntries({
     content_type: "gallery",
   });
@@ -37,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }: any) => {
+export const getStaticProps = async ({ params }: any) => {
   const { items } = await client.getEntries({
     content_type: "gallery",
     "fields.slug": params.slug,
