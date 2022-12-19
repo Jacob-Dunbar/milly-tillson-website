@@ -5,6 +5,8 @@ export const StyledAbout = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 80vh;
+  padding-bottom: 25vh;
 
   p:nth-child(1) {
     font-size: 1rem;
@@ -22,7 +24,9 @@ export const StyledAbout = styled.section`
   }
 
   @media (max-width: 420px) {
-    min-height: 80vh;
+    min-height: 75vh;
+    padding-bottom: 0;
+    padding-top: 5vh;
 
     p:nth-child(1) {
       font-size: 0.75rem;
