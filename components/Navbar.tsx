@@ -1,14 +1,28 @@
 import Link from "next/link";
-import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { useState, useEffect } from "react";
+import {
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiOutlineClose,
+  AiOutlineMenu,
+} from "react-icons/ai";
 import { StyledNavbar } from "./Styled/Navbar.style";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
+  const [showMobMenu, setShowMobMenu] = useState(false);
+
   return (
-    <StyledNavbar>
+    <StyledNavbar showMobMenu={showMobMenu}>
       <Link href="/">
         <h1>Milly Tillson</h1>
       </Link>
-      <ul>
+
+      <AiOutlineMenu className="toggle" onClick={() => setShowMobMenu(true)} />
+
+      <MobileMenu showMobMenu={showMobMenu} setShowMobMenu={setShowMobMenu} />
+
+      <ul className="desk">
         <Link href="/">
           <li>Home</li>
         </Link>
