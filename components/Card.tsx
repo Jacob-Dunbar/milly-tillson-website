@@ -28,7 +28,6 @@ const GalleryCard: React.FC<Props> = ({ gallery }) => {
 
   return (
     <StyledCard>
-      {" "}
       <Link href={"/galleries/" + slug}>
         <Image
           className="image"
