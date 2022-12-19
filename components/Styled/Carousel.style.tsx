@@ -36,6 +36,8 @@ export const StyledCarousel = styled.div`
   @media (max-width: 420px) {
     flex-direction: column;
     height: 100%;
+    margin-bottom: 5vh;
+    margin-top: 110px;
 
     overflow-y: visible;
 

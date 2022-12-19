@@ -21,11 +21,13 @@ export const StyledGallery = styled.section`
     overflow-y: visible;
 
     h1 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       position: absolute;
       z-index: 50;
-      top: 3vh;
+      top: 96px;
       right: 5%;
+      width: 75%;
+      text-align: right;
     }
   }
 `;
