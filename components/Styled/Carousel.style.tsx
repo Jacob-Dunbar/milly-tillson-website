@@ -26,7 +26,7 @@ export const StyledCarousel = styled.div`
     position: relative;
 
     &:first-child {
-      margin-left: 400px;
+      margin-left: 430px;
     }
 
     .image {
