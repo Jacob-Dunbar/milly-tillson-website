@@ -15,11 +15,11 @@ export const StyledCard = styled.div`
 
   h2 {
     position: absolute;
-    bottom: -1rem;
+    bottom: -0.75rem;
     right: 0;
 
     color: black;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 
     text-align: end;
     transition: all 600ms ease;

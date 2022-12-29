@@ -22,8 +22,8 @@ a{
 
 
 body {
-    background-color: #f9f3f3;
-    color: hsl(192, 100%, 9%);
+    background-color: #fafafa;
+    color: #000000;
     font-family: "Poppins", sans-serif;
     font-size: 1.15rem;
     margin: 0;

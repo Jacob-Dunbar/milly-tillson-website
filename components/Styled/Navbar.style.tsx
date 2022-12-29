@@ -30,7 +30,7 @@ export const StyledNavbar = styled.nav<Props>`
     align-items: center;
     list-style: none;
     gap: 2rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     color: black;
 

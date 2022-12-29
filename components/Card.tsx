@@ -32,7 +32,7 @@ const GalleryCard: React.FC<Props> = ({ gallery }) => {
         <Image
           className="image"
           src={gallery.imagesCollection.items[0].url}
-          quality={50}
+          quality={100}
           width={imagesCollection.items[0].width}
           height={imagesCollection.items[0].height}
           alt={name + "thumbnail"}

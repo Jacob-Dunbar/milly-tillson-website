@@ -7,10 +7,10 @@ export const StyledGallery = styled.section`
   height: 80vh;
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     position: absolute;
     z-index: 50;
-    top: 66vh;
+    top: 67vh;
     right: 80px;
   }
 

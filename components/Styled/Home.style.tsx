@@ -4,35 +4,42 @@ export const StyledHome = styled.section`
   display: flex;
   flex-direction: column;
 
-  padding: 2rem 3rem;
+  padding: 2rem 4rem;
   margin-bottom: 6rem;
   min-height: 100vh;
+  max-width: 1500px;
 
   div:nth-child(1) {
     margin-left: auto;
+    margin-right: 6rem;
   }
 
   div:nth-child(2) {
-    margin-top: -10rem;
+    margin-top: -12rem;
   }
 
   div:nth-child(3) {
-    margin-top: 10rem;
+    margin-top: -7rem;
     margin-left: auto;
+
+    .image {
+      width: 700px;
+      height: auto;
+    }
   }
 
   div:nth-child(4) {
-    margin-top: 10rem;
+    margin-top: 2rem;
   }
 
   div:nth-child(5) {
-    margin-top: 5rem;
-    margin-left: 20rem;
+    margin-top: -15rem;
+    margin-left: auto;
   }
 
   div:nth-child(6) {
-    margin-top: 5rem;
-    margin-left: auto;
+    margin-top: -10rem;
+    margin-left: 15rem;
   }
 
   @media (max-width: 420px) {
