@@ -29,10 +29,14 @@ export const StyledNavbar = styled.nav<Props>`
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 2rem;
+
     font-size: 0.9rem;
 
     color: black;
+
+    li {
+      margin-left: 1rem;
+    }
 
     > *:hover {
       color: #ce8b8a;
@@ -42,6 +46,8 @@ export const StyledNavbar = styled.nav<Props>`
     .icon {
       display: flex;
       align-items: center;
+
+      margin-left: 1rem;
     }
   }
 

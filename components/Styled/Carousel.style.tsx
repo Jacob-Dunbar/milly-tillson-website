@@ -5,7 +5,6 @@ export const StyledCarousel = styled.div`
   position: relative;
   display: flex;
 
-  gap: 1rem;
   margin-left: auto;
   width: 100%;
 
@@ -22,6 +21,7 @@ export const StyledCarousel = styled.div`
   & > * {
     height: 65vh;
     width: auto;
+    margin-left: 1rem;
 
     position: relative;
 
