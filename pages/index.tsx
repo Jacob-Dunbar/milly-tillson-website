@@ -64,11 +64,6 @@ export const getStaticProps = async () => {
     }
   );
 
-  if (!result.ok) {
-    console.log(result);
-    return {};
-  }
-
   const { data } = await result.json();
   const galleries = data.galleryCollection.items.sort(
     (a: any, b: any) => a.order - b.order
@@ -78,6 +73,7 @@ export const getStaticProps = async () => {
     props: {
       galleries,
     },
+    revalidate: 10,
   };
 };
 

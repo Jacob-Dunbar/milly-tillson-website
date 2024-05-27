@@ -37,7 +37,6 @@ const GalleryCard: React.FC<Props> = ({ gallery }) => {
           height={imagesCollection.items[0].height}
           alt={name + "thumbnail"}
         />
-
         <h2>{name}</h2>
       </Link>
     </StyledCard>

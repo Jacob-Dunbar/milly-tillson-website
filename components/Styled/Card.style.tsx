@@ -15,7 +15,6 @@ export const StyledCard = styled.div`
 
   h2 {
     position: absolute;
-    bottom: -0.75rem;
     right: 0;
 
     color: black;
@@ -44,8 +43,6 @@ export const StyledCard = styled.div`
 
     h2 {
       font-size: 1.2rem;
-
-      bottom: -0.5rem;
       right: 0.5rem;
     }
 

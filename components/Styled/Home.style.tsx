@@ -7,6 +7,7 @@ export const StyledHome = styled.section`
   padding: 2rem 4rem;
   margin-bottom: 6rem;
   min-height: 100vh;
+  margin-inline: auto;
   max-width: 1500px;
 
   div:nth-child(1) {
@@ -72,7 +73,7 @@ export const StyledHome = styled.section`
     }
 
     div:nth-child(6) {
-      margin-top: 5rem;
+      margin-block: 5rem;
       margin-left: auto;
     }
   }

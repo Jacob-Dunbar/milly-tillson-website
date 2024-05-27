@@ -9,7 +9,6 @@ interface Props {
 }
 
 const about = ({ about }: Props) => {
-  console.log(about);
   const { block1, block2 } = about;
 
   return (
@@ -47,7 +46,6 @@ export const getStaticProps = async () => {
   );
 
   if (!result.ok) {
-    console.log(result);
     return {};
   }
 

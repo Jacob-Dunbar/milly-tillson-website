@@ -8,9 +8,8 @@ const GalleryPage = ({ gallery }: any) => {
 
   return (
     <StyledGallery>
-      <h1>{name}</h1>
-
       <Carousel images={images} name={name} />
+      <h1>{name}</h1>
     </StyledGallery>
   );
 };

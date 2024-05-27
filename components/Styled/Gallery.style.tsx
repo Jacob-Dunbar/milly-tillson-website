@@ -10,8 +10,8 @@ export const StyledGallery = styled.section`
     font-size: 2.5rem;
     position: absolute;
     z-index: 50;
-    top: 67vh;
     right: 80px;
+    margin-top: 10px;
   }
 
   @media (max-width: 420px) {

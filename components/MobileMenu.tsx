@@ -13,7 +13,6 @@ interface Props {
 }
 
 const MobileMenu: React.FC<Props> = (props) => {
-  console.log(props.showMobMenu);
   return (
     <StyledMobileMenu showMobMenu={props.showMobMenu}>
       <ul>
