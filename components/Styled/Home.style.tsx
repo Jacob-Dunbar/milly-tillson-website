@@ -22,11 +22,6 @@ export const StyledHome = styled.section`
   div:nth-child(3) {
     margin-top: -7rem;
     margin-left: auto;
-
-    .image {
-      width: 700px;
-      height: auto;
-    }
   }
 
   div:nth-child(4) {
