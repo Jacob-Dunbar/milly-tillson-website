@@ -12,6 +12,7 @@ interface Props {
     order: number;
     slug: string;
   };
+  priority?: boolean;
 }
 
 interface Image {
@@ -23,7 +24,7 @@ interface Image {
 
 type Images = Image[];
 
-const GalleryCard: React.FC<Props> = ({ gallery }) => {
+const GalleryCard: React.FC<Props> = ({ gallery, priority = false }) => {
   const { name, slug, imagesCollection } = gallery;
 
   return (
@@ -32,6 +33,7 @@ const GalleryCard: React.FC<Props> = ({ gallery }) => {
         <Image
           className="image"
           src={gallery.imagesCollection.items[0].url}
+          priority={priority}
           quality={100}
           width={imagesCollection.items[0].width}
           height={imagesCollection.items[0].height}

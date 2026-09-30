@@ -8,6 +8,7 @@ const Carousel = ({ images, name }: any) => {
         <Image
           className="image"
           src={`https:${image.fields.file.url}`}
+          priority={i === 0}
           width={image.fields.file.details.image.width}
           height={image.fields.file.details.image.height}
           alt={name}

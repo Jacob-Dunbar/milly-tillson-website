@@ -19,8 +19,14 @@ export default function Home({ galleries }: any) {
       </Head>
 
       <StyledHome>
-        {galleries.map((gallery: any) => {
-          return <GalleryCard key={gallery.sys.id} gallery={gallery} />;
+        {galleries.map((gallery: any, index: number) => {
+          return (
+            <GalleryCard
+              key={gallery.sys.id}
+              gallery={gallery}
+              priority={index === 0}
+            />
+          );
         })}
       </StyledHome>
     </>
@@ -61,12 +67,12 @@ export const getStaticProps = async () => {
         }
         `,
       }),
-    }
+    },
   );
 
   const { data } = await result.json();
   const galleries = data.galleryCollection.items.sort(
-    (a: any, b: any) => a.order - b.order
+    (a: any, b: any) => a.order - b.order,
   );
 
   return {
